@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from 'react-apollo';
+import { ApolloProvider } from '@apollo/react-hooks';
 
 import '@gctools-components/aurora-css/css/aurora.min.css';
 
@@ -16,7 +16,7 @@ import store from './store';
 import './assets/css/index.css';
 
 const client = new ApolloClient({
-  uri: 'https://link.to.your.backend/graphql',
+  uri: 'http://localhost:4000',
 });
 
 ReactDOM.render(

@@ -28,6 +28,7 @@ import Home from './Home';
 import Info from './Info';
 import ProductPage from './examples/ProductPage';
 import Blog from './examples/Blog';
+import Data from './Data-Display';
 
 // Assets
 import enFip from '../assets/imgs/sig-en-w.png';
@@ -89,7 +90,7 @@ export class App extends Component {
               <img src={fip} alt={__('Government of Canada')} />
             </div>
             <NavbarBrand href="/" className="directory-brand">
-              <span>App Title</span>
+              <span>{__('Beta Feedback')}</span>
             </NavbarBrand>
             <Nav className="ml-auto">
               <NavItem className="mr-2">
@@ -135,6 +136,7 @@ export class App extends Component {
                   path="/"
                   component={Home}
                 />
+                <Route path="/data" component={Data} />
                 <Route path="/info" component={Info} />
                 <Route path="/product" component={ProductPage} />
                 <Route path="/blog" component={Blog} />

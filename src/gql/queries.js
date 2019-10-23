@@ -3,41 +3,24 @@
 */
 import gql from 'graphql-tag';
 
-export const GET = gql`
-query getProfile($gcID: ID!) {
-  profiles(gcID: $gcID) {
-    gcID
-    name
-    email
-    avatar
-    mobilePhone
-    officePhone
-    team {
-      id
-      organization {
-        id
-        nameEn
-        nameFr
-      }
-      owner {
-        gcID
-        name
-        avatar
-        titleEn
-        titleFr
-      }
+export const getFeedback = gql`
+  query getFeedback($appID: ID!) {
+    feedback(appID:$appID) {
+      id,
+      email,
+      comment,
+      created,
     }
-    address {
-      id
-      streetAddress
-      city
-      province
-      postalCode
-      country
-    }
-    titleEn
-    titleFr
   }
-}`;
+`;
 
-export default GET;
+export const getApps = gql`
+  query getApps($appID:ID){
+    applications(appID:$appID){
+      id,
+      name,
+      type,
+    }
+  }
+`;
+

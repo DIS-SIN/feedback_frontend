@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://username.github.io/repo",
   "dependencies": {
+    "@apollo/react-hooks": "^3.1.3",
     "@babel/core": "7.3.3",
     "@gctools-components/aurora-css": "^0.3.3",
     "@gctools-components/eslint-config": "1.1.3",
