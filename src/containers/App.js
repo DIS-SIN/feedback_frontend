@@ -24,10 +24,6 @@ import { loginAction, logoutAction, clearErrorAction } from '../store';
 import oidcConfig from '../oidcConfig.dev';
 
 // Containers
-import Home from './Home';
-import Info from './Info';
-import ProductPage from './examples/ProductPage';
-import Blog from './examples/Blog';
 import Data from './Data-Display';
 
 // Assets
@@ -134,12 +130,9 @@ export class App extends Component {
                 <Route
                   exact
                   path="/"
-                  component={Home}
+                  component={Data}
                 />
                 <Route path="/data" component={Data} />
-                <Route path="/info" component={Info} />
-                <Route path="/product" component={ProductPage} />
-                <Route path="/blog" component={Blog} />
               </Fragment>
             </Switch>
           </main>

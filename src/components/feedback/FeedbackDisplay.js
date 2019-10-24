@@ -1,36 +1,38 @@
 import React, { useState } from 'react';
 import { Row } from 'reactstrap';
-import { useQuery } from '@apollo/react-hooks';
-import { getApps } from '../../gql/queries';
+import PropTypes from 'prop-types';
 import FeedbackSelector from './FeedbackSelector';
 import FeedbackHolder from './FeedbackHolder';
 
-const FeedbackDisplay = () => {
-  const [app, setApp] = useState('');
+const FeedbackDisplay = (props) => {
+  const [app, setApp] = useState(props.applications[0].id);
   const changeApp = (changedTo) => {
     setApp(changedTo.target.value);
   };
 
-  const { loading, error, data } = useQuery(getApps);
-
-  if (loading) return 'Loading...';
-  if (error) return `Error! ${error.message}`;
-
   return (
     <React.Fragment>
-      <Row className="flex">
+      <Row className="flex col-12">
         <FeedbackSelector
           handleChange={changeApp}
-          applications={data.applications}
+          applications={props.applications}
         />
       </Row>
-      <Row className="flex">
+      <Row className="flex col-12">
         <FeedbackHolder
-          appID={app}
+          id={app}
         />
       </Row>
     </React.Fragment>
   );
+};
+
+FeedbackDisplay.propTypes = {
+  applications: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+  })).isRequired,
 };
 
 export default FeedbackDisplay;

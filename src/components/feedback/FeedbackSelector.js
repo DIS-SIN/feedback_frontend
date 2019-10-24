@@ -26,7 +26,11 @@ const FeedbackSelector = props => (
 
 FeedbackSelector.propTypes = {
   handleChange: PropTypes.func,
-  applications: PropTypes.objectOf(PropTypes.array).isRequired,
+  applications: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+  })),
 };
 
 FeedbackSelector.defaultProps = {
@@ -34,6 +38,7 @@ FeedbackSelector.defaultProps = {
     // eslint-disable-next-line
     alert(value.target.value)
   ),
+  applications: [{ id: '1', name: 'Test application', type: 'Web' }],
 };
 
 
