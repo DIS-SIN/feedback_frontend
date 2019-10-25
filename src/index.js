@@ -16,7 +16,9 @@ import store from './store';
 import './assets/css/index.css';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000',
+  // Get's the following value from environment variable
+  // called REACT_APP_APOLLO_CLIENT_URI
+  uri: process.env.REACT_APP_APOLLO_CLIENT_URI,
 });
 
 ReactDOM.render(
