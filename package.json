@@ -75,7 +75,7 @@
     "workbox-webpack-plugin": "3.6.3"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "export PORT=3000 node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "test2": "jest --rootDir . --watchPathIgnorePatterns jest.json --testURL http://localhost --config ./node_modules/@gctools-components/jest-config/index.js",
