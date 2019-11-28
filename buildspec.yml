@@ -34,5 +34,6 @@ phases:
 artifacts:
   files:
     - '**/*'
+  base-directory: build
     # - location
   #name: $(date +%Y-%m-%d)
