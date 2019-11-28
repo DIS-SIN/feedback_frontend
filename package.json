@@ -2,7 +2,7 @@
   "name": "front_end_template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://username.github.io/repo",
+  "homepage": "http://username.github.io",
   "dependencies": {
     "@apollo/react-hooks": "^3.1.3",
     "@babel/core": "7.3.3",
