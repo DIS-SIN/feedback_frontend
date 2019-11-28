@@ -21,7 +21,6 @@ const client = new ApolloClient({
   uri: process.env.APOLLO_CLIENT_URI,
 });
 
-console.log(`ENV vars: NODE_ENV: ${process.env.NODE_ENV} APOLLO_URI: ${process.env.APOLLO_CLIENT_URI}`);
 
 ReactDOM.render(
   <Provider store={store}>
