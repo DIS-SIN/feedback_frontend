@@ -76,6 +76,9 @@ function getClientEnvironment(publicUrl) {
         // This should only be used as an escape hatch. Normally you would put
         // images into the `src` and `import` them in code to get their paths.
         PUBLIC_URL: publicUrl,
+        // This is where the Apollo Server endpoint is set.
+        // It let's apollo client know which graphql endpoint to use.
+        APOLLO_SERVER: process.env.APOLLO_SERVER
       },
     );
   // Stringify all values so we can feed into Webpack DefinePlugin
