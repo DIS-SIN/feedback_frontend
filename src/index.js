@@ -5,20 +5,45 @@ import ReactDOM from 'react-dom';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
 
+
 import '@gctools-components/aurora-css/css/aurora.min.css';
 
 import { Provider } from 'react-redux';
 
+import oidcClient from './oidcConfig.dev';
 import ConnectedAndLocalizedApp from './containers/App';
 import * as serviceWorker from './serviceWorker';
 import store from './store';
 
 import './assets/css/index.css';
 
+const authToken = () => {
+  // get the authentication token from redux store if it exists
+
+  const sessionInfo = JSON.parse(sessionStorage
+    .getItem(`oidc.user:${oidcClient.authority}:${oidcClient.client_id}`));
+
+  const token = () => {
+    if (sessionInfo) {
+      return sessionInfo.access_token ?
+        `Bearer ${sessionInfo.access_token}` : '';
+    }
+    return '';
+  };
+  return token();
+};
+
+
 const client = new ApolloClient({
-  // Get's the following value from environment variable
-  // called REACT_APP_APOLLO_CLIENT_URI
   uri: process.env.APOLLO_SERVER,
+  request: (operation) => {
+    const token = authToken();
+    operation.setContext({
+      headers: {
+        authorization: token,
+      },
+    });
+  },
 });
 
 ReactDOM.render(

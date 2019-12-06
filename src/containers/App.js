@@ -132,7 +132,6 @@ export class App extends Component {
                   path="/"
                   component={Data}
                 />
-                <Route path="/data" component={Data} />
               </Fragment>
             </Switch>
           </main>

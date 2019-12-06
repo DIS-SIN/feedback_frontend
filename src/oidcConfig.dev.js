@@ -1,11 +1,10 @@
 const url = window.location.origin;
 
 module.exports = {
-  authority: 'https://your.OpenID.provider/openid',
-  client_id: '123456',
-  client_secret:
-  'shhhhhhhh-its-a-secret-to-everyone-replace-me',
-  scope: 'openid YOUR_SCOPES_HERE',
+  authority: 'https://account.da-an.ca/openid',
+  response_type: 'id_token token',
+  client_id: '450483',
+  scope: 'openid profile',
   post_logout_redirect_uri: `${url}/#!logout`,
   redirect_uri: `${url}/#!callback`,
   silent_redirect_uri: `${url}/#!silent`,
