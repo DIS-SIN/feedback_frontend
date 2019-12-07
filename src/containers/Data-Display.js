@@ -20,7 +20,8 @@ const Data = (props) => {
         {props.isLoggedIn ?
           <FeedbackDisplay
             applications={data.applications}
-          /> : __('Please login to view feedback')
+          />
+          : __('Please login')
         }
       </Row>
     </Container>

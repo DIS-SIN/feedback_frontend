@@ -30,3 +30,15 @@ msgstr ""
 msgid "Error"
 msgstr ""
 
+#: src/containers/Data-Display.js 23:15
+msgid "Please login above to view feedback"
+msgstr ""
+
+#: src/containers/Data-Display.js 24:12
+msgid "Please login"
+msgstr ""
+
+#: src/containers/Data-Display.js 24:12
+msgid "Please login to view"
+msgstr ""
+
