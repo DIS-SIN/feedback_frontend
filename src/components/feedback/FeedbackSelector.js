@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
 
 const FeedbackSelector = props => (
   <form>
@@ -42,4 +44,4 @@ FeedbackSelector.defaultProps = {
 };
 
 
-export default FeedbackSelector;
+export default LocalizedComponent(FeedbackSelector);

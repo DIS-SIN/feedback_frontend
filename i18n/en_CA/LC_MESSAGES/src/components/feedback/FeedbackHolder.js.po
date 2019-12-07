@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-23 10:21-0400\n"
-"PO-Revision-Date: 2019-10-23 10:21-0400\n"
+"POT-Creation-Date: 2019-12-07 09:34-0500\n"
+"PO-Revision-Date: 2019-12-07 08:50-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_CA\n"
 "Language-Team: en_CA <LL@li.org>\n"
@@ -14,7 +14,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: 8:50 src/components/feedback/FeedbackTile.js
+#: 20:51 src/components/feedback/FeedbackHolder.js
 msgid "Anonymous"
+msgstr ""
+
+#: 12:22 src/components/feedback/FeedbackHolder.js
+msgid "Loading..."
+msgstr ""
+
+#: 15:23 src/components/feedback/FeedbackHolder.js
+msgid "Error"
 msgstr ""
 

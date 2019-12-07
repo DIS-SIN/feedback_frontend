@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-23 08:54-0400\n"
+"POT-Creation-Date: 2019-12-07 09:35-0500\n"
 "PO-Revision-Date: 2019-10-23 08:54-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -17,4 +17,22 @@ msgstr ""
 #: 8:31 src/containers/Data-Display.js
 msgid "Feedback Display"
 msgstr "Affichage des commentaires"
+
+#: 11:22 src/containers/Data-Display.js
+msgid "Loading..."
+msgstr "Chargement..."
+
+#: 21:15 src/containers/Data-Display.js
+msgid "Please log in to view feedback"
+msgstr "Veuillez connecter pour voir les commentaires"
+
+#: 21:15 src/containers/Data-Display.js
+#, fuzzy
+msgid "Please login to view feedback"
+msgstr "Veuillez connecter pour voir les commentaires"
+
+#: 14:23 src/containers/Data-Display.js
+#, fuzzy
+msgid "Error"
+msgstr "Erreur"
 

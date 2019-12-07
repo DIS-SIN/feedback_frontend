@@ -16,5 +16,5 @@ msgstr ""
 
 #: 12:30 src/components/feedback/FeedbackSelector.js
 msgid "Select an Application"
-msgstr ""
+msgstr "Sélectionnez une application"
 

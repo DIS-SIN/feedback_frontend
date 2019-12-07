@@ -10,3 +10,23 @@ msgstr ""
 msgid "Feedback Display"
 msgstr ""
 
+#: src/containers/Data-Display.js 11:22
+msgid "Loading..."
+msgstr ""
+
+#: src/containers/Data-Display.js 12:23
+msgid "Error!"
+msgstr ""
+
+#: src/containers/Data-Display.js 21:15
+msgid "Please log in to view feedback"
+msgstr ""
+
+#: src/containers/Data-Display.js 21:15
+msgid "Please login to view feedback"
+msgstr ""
+
+#: src/containers/Data-Display.js 14:23
+msgid "Error"
+msgstr ""
+

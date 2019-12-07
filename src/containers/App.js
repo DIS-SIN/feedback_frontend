@@ -24,7 +24,7 @@ import { loginAction, logoutAction, clearErrorAction } from '../store';
 import oidcConfig from '../oidcConfig.dev';
 
 // Containers
-import Data from './Data-Display';
+import LocalizedData from './Data-Display';
 
 // Assets
 import enFip from '../assets/imgs/sig-en-w.png';
@@ -130,7 +130,8 @@ export class App extends Component {
                 <Route
                   exact
                   path="/"
-                  component={Data}
+                  // eslint-disable-next-line max-len
+                  render={props => <LocalizedData {...props} isLoggedIn={this.state.name ? 1 : 0} />}
                 />
               </Fragment>
             </Switch>

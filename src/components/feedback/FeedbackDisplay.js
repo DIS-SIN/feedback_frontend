@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Row } from 'reactstrap';
 import PropTypes from 'prop-types';
-import FeedbackSelector from './FeedbackSelector';
-import FeedbackHolder from './FeedbackHolder';
+import LocalizedFeedbackSelector from './FeedbackSelector';
+import LocalizedFeedbackHolder from './FeedbackHolder';
 
 const FeedbackDisplay = (props) => {
   const [app, setApp] = useState(props.applications[0].id);
@@ -13,13 +13,13 @@ const FeedbackDisplay = (props) => {
   return (
     <React.Fragment>
       <Row className="flex col-12">
-        <FeedbackSelector
+        <LocalizedFeedbackSelector
           handleChange={changeApp}
           applications={props.applications}
         />
       </Row>
       <Row className="flex col-12">
-        <FeedbackHolder
+        <LocalizedFeedbackHolder
           id={app}
         />
       </Row>
