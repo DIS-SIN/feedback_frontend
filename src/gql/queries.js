@@ -5,7 +5,7 @@ import gql from 'graphql-tag';
 
 export const getFeedback = gql`
   query getFeedback($appID: ID!) {
-    feedback(appID:$appID) {
+    feedback(appID:$appID, orderBy: id_DESC) {
       id,
       email,
       comment,
