@@ -20,7 +20,7 @@ const FeedbackHolder = (props) => {
       <div className="card-body">
         <p className="card-text">{item.comment}</p>
         <div className="text-muted">{item.email || __('Anonymous')}</div>
-        <small className="text-muted">{item.createdAt}</small>
+        <small className="text-muted">{item.created}</small>
       </div>
     </li>
   ));
