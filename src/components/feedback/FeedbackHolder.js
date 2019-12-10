@@ -5,6 +5,11 @@ import LocalizedComponent
 import PropTypes from 'prop-types';
 import { getFeedback } from '../../gql/queries';
 
+function localeDate(dateString) {
+  const createdDate = new Date(Date.parse(dateString));
+  return createdDate.toString();
+}
+
 const FeedbackHolder = (props) => {
   const { loading, error, data } =
     useQuery(getFeedback, {
@@ -20,7 +25,7 @@ const FeedbackHolder = (props) => {
       <div className="card-body">
         <p className="card-text">{item.comment}</p>
         <div className="text-muted">{item.email || __('Anonymous')}</div>
-        <small className="text-muted">{item.created}</small>
+        <small className="text-muted">{localeDate(item.created)}</small>
       </div>
     </li>
   ));
