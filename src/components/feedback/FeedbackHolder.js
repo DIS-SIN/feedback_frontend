@@ -4,11 +4,7 @@ import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 import PropTypes from 'prop-types';
 import { getFeedback } from '../../gql/queries';
-
-function localeDate(dateString) {
-  const createdDate = new Date(Date.parse(dateString));
-  return createdDate.toString();
-}
+import FeedbackTile from './FeedbackTile';
 
 const FeedbackHolder = (props) => {
   const { loading, error, data } =
@@ -21,13 +17,14 @@ const FeedbackHolder = (props) => {
   if (error) return `${__('Error')}! ${error.message}`;
 
   const feedbackList = data.feedback.map(item => (
-    <li key={item.id} className="card mb-2 d-inline-block d-flex">
-      <div className="card-body">
-        <p className="card-text">{item.comment}</p>
-        <div className="text-muted">{item.email || __('Anonymous')}</div>
-        <small className="text-muted">{localeDate(item.created)}</small>
-      </div>
-    </li>
+    <FeedbackTile
+      key={item.id}
+      email={item.email}
+      comment={item.comment}
+      created={item.created}
+      botScore={item.botScore}
+    />
+
   ));
 
   return (

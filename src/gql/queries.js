@@ -10,6 +10,7 @@ export const getFeedback = gql`
       email,
       comment,
       created,
+      botScore
     }
   }
 `;
